@@ -1,0 +1,70 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: transparent;
+    outline: none;
+    list-style: none;
+    border: none;
+    text-decoration: none;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+    padding-left: 10px;
+}
+
+.dropdown-container {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-container button {
+    width: 200px;
+    height: 60px;
+    display: inline-block;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background-color: green;
+    border: 10px solid #fff;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.dropdown-container nav {
+    position: absolute;
+    background-color: #fff;
+    width: 100%;
+    top: 90%;
+    left: 0;
+    padding: 10px 15px;
+    border: 1px solid green;
+    opacity: 0;
+    visibility: hidden;
+    transition: 300ms all;
+}
+
+.dropdown-container nav ul li a {
+    display: block;
+    padding: 10px 5px;
+    color: green;
+    font-size: 14px;
+}
+
+.dropdown-container nav ul li a:hover {
+    background-color: rgb(110, 141, 110);
+    color: #fff;
+}
+
+.dropdown-container:focus-within nav {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(5px);
+}
+
+.dropdown-container:focus-within button {
+    background-color: orange;
+}
